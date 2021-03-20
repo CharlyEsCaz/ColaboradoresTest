@@ -41,7 +41,7 @@ class LoginActivity: AppCompatActivity(), LoginView {
 
     private fun setupGoogleLogin()
     {
-        vBind.btnLogin.setOnClickListener {
+        vBind.llLogin.setOnClickListener {
             val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.default_web_client_id))
                     .requestEmail()
