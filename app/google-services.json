@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481460956799",
+    "project_id": "colaboradores-d8a5e",
+    "storage_bucket": "colaboradores-d8a5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481460956799:android:731aba431dfaa10bf6194a",
+        "android_client_info": {
+          "package_name": "mx.com.charlyescaz.colaboradorestest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481460956799-k3d67b9boehe5adeecnfnl4t2cjkssul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA72qzym7DUL1klolQ4DFF_Ok0UegzhLpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481460956799-k3d67b9boehe5adeecnfnl4t2cjkssul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Colaboradores Test</string>
+    <string name="google_error_credentials">Usuario o contraseña incorrectos</string>
+    <string name="google_success_credentials">Inicio de sesión exitoso</string>
+    <string name="google_error_exception">Ocurrio un error, intentelo mas tarde</string>
+</resources>
