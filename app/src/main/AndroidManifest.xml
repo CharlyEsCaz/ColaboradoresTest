@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.home.view.HomeActivity" />
         <activity android:name=".ui.auth.view.LoginActivity" />
+        <activity android:name=".ui.collaborators.list.view.CollaboratorsActivity" />
     </application>
 
 </manifest>
