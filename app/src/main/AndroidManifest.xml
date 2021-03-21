@@ -21,6 +21,7 @@
         <activity android:name=".ui.auth.view.LoginActivity" />
         <activity android:name=".ui.collaborators.list.view.CollaboratorsActivity" />
         <activity android:name=".ui.collaborators.map.view.MapActivity" />
+        <activity android:name=".ui.collaborators.add.view.AddCollaboratorActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

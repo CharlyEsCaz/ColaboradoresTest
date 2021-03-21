@@ -10,6 +10,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import mx.com.charlyescaz.colaboradorestest.R
 import mx.com.charlyescaz.colaboradorestest.databinding.ActivityHomeBinding
 import mx.com.charlyescaz.colaboradorestest.ui.auth.view.LoginActivity
+import mx.com.charlyescaz.colaboradorestest.ui.collaborators.add.view.AddCollaboratorActivity
 import mx.com.charlyescaz.colaboradorestest.ui.collaborators.list.view.CollaboratorsActivity
 import mx.com.charlyescaz.colaboradorestest.ui.home.data.HomeRepository
 import mx.com.charlyescaz.colaboradorestest.ui.home.presenter.HomePresenter
@@ -54,7 +55,7 @@ class HomeActivity: AppCompatActivity(), HomeView {
         vBind.cvAdd.visibility = View.VISIBLE
 
         vBind.cvAdd.setOnClickListener {
-
+            startActivity( Intent(this, AddCollaboratorActivity::class.java) )
         }
     }
 

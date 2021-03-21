@@ -8,6 +8,7 @@ object ModelExtensions {
     val gson = Gson()
 
     fun CollaboratorDB.toCollaborator() = toModel(this, Collaborator::class.java)
+    fun Collaborator.toCollaboratorDB() = toModel(this, CollaboratorDB::class.java)
 
     fun <T> Any.toModel(ob: Any, cl: Class<T>): T {
         val data = gson.toJsonTree(ob).asJsonObject

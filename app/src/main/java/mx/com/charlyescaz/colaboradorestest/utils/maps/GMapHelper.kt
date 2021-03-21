@@ -41,6 +41,19 @@ class GMapHelper(
         ).tag = tag
     }
 
+    fun setUniqueMarker(
+        location: LatLng,
+        title: String,
+        tag: Any? = null
+    ) {
+        map.clear()
+        map.addMarker(
+            MarkerOptions()
+                .position(location)
+                .title(title)
+        ).tag = tag
+    }
+
     private fun setupInfoWindow() {
         map.uiSettings.isZoomControlsEnabled = true
         map.setInfoWindowAdapter(object : GoogleMap.InfoWindowAdapter {

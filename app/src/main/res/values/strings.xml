@@ -18,8 +18,13 @@
     <string name="empty_collaborators">Sin Colaboradores</string>
     <string name="loading">Cargando</string>
     <string name="getting_data">Obteniendo datos</string>
-    <string name="add_collaborator">Agregar Colaborador</string>
     <string name="name">Nombre</string>
     <string name="email">Correo electónico</string>
     <string name="select_position">Seleccione una posición en el mapa</string>
+    <string name="save">Guardar</string>
+    <string name="error_insert_collaborator">Ocurrió un error al guardar la información</string>
+    <string name="address">Dirección</string>
+    <string name="required">El campo es requerido</string>
+    <string name="error_email">Ingrese un correo valido</string>
+    <string name="insert_success">Colaborador agregado</string>
 </resources>

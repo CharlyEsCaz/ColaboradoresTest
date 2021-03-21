@@ -1,15 +1,13 @@
 package mx.com.charlyescaz.colaboradorestest.models
 
-class Collaborator(
+class Collaborator{
+    val idLocalDB: Long? = null
 
-    val idLocalDB: Long? = null,
+    val id: Long? = null
 
-    val id: Long? = null,
+    var name: String? = ""
 
-    var name: String? = null,
-
-    var mail: String? = null,
+    var mail: String? = ""
 
     var location: Location? = null
-
-)
+}
