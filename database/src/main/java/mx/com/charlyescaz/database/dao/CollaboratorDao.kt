@@ -13,7 +13,7 @@ import mx.com.charlyescaz.database.models.CollaboratorDB
 interface CollaboratorDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun upsert(vararg partner: CollaboratorDB): Completable
+    fun upsert(vararg collaborator: CollaboratorDB): Completable
 
     @Query("SELECT * FROM collaborator")
     fun getAll(): Maybe<List<CollaboratorDB>>

@@ -22,6 +22,7 @@ versions.shape_of_view = "1.4.7"
 //Firebase
 versions.firebase_boom = "26.7.0"
 versions.services_auth = "19.0.0"
+
 //RXJava
 versions.rx_java_2 = "2.2.9"
 versions.rx_android = "2.1.1"
@@ -76,6 +77,7 @@ firebase.firebase_boom = "com.google.firebase:firebase-bom:$versions.firebase_bo
 firebase.firebase_auth = "com.google.firebase:firebase-auth-ktx"
 firebase.firebase_play_services_auth = "com.google.android.gms:play-services-auth:$versions.services_auth"
 firebase.firebase_analytics = "com.google.firebase:firebase-analytics-ktx"
+firebase.firestore = "com.google.firebase:firebase-firestore-ktx"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.kotlin = kotlin

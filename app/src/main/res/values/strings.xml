@@ -5,4 +5,14 @@
     <string name="google_error_exception">Ocurrio un error, intentelo mas tarde</string>
     <string name="collaborators">Colaboradores</string>
     <string name="wait">Espere porfavor...</string>
+    <string name="add_collaborator">Agregar Colaborador</string>
+    <string name="my_collaborators">Mis colaboradores</string>
+    <string name="collaborators_errors_get">Ocurrio un error al obtener los colaboradores</string>
+    <string name="collaborators_errors_decompress">Ocurrio un error al descomprimir los colaboradores</string>
+    <string name="network_error">Ocurrio un error de red</string>
+    <string name="api_download_error">Ocurrio un error al descargar los colaboradores</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="logout_question">¿Esta seguro de cerrar sesión?</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
 </resources>

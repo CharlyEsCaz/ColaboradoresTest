@@ -65,6 +65,7 @@ dependencies {
     implementation deps.firebase.firebase_auth
     implementation deps.firebase.firebase_play_services_auth
     implementation deps.firebase.firebase_analytics
+    implementation deps.firebase.firestore
 
     //Support
     implementation deps.support.appcompat

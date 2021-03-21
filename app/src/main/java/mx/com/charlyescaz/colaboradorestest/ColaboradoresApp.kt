@@ -1,6 +1,7 @@
 package mx.com.charlyescaz.colaboradorestest
 
 import android.app.Application
+import androidx.room.Room
 import mx.com.charlyescaz.database.DBColaboradores
 
 class ColaboradoresApp: Application() {
@@ -12,6 +13,11 @@ class ColaboradoresApp: Application() {
 
 
     private fun initDatabase() {
-        DBColaboradores.createDatabase(this)
+        DBColaboradores.db = Room
+            .databaseBuilder(this,
+                DBColaboradores::class.java,
+                "colaboradores.db")
+            .fallbackToDestructiveMigration()
+            .build()
     }
 }

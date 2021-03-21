@@ -71,7 +71,7 @@ object APIColaboradores {
         callback(false, null)
     }
 
-    fun getPartners(cb: (success: Boolean, data: GenericResponseWS<FileWS>?) -> Unit) {
+    fun getCollaborators(cb: (success: Boolean, data: GenericResponseWS<FileWS>?) -> Unit) {
         doRequest(
             "Get Partners Data",
             apiService.getPartners(),
