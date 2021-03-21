@@ -22,7 +22,6 @@ versions.shape_of_view = "1.4.7"
 //Firebase
 versions.firebase_boom = "26.7.0"
 versions.services_auth = "19.0.0"
-
 //RXJava
 versions.rx_java_2 = "2.2.9"
 versions.rx_android = "2.1.1"
@@ -30,6 +29,8 @@ versions.room_rx = "1.1.1"
 //Room
 versions.room = "2.2.6"
 versions.rx_java = "2.2.6"
+//Maps
+versions.maps = "17.0.0"
 
 
 def deps = [:]
@@ -79,6 +80,10 @@ firebase.firebase_play_services_auth = "com.google.android.gms:play-services-aut
 firebase.firebase_analytics = "com.google.firebase:firebase-analytics-ktx"
 firebase.firestore = "com.google.firebase:firebase-firestore-ktx"
 
+def maps = [:]
+maps.location = "com.google.android.gms:play-services-location:$versions.maps"
+maps.maps = "com.google.android.gms:play-services-maps:$versions.maps"
+
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.kotlin = kotlin
 deps.support = support
@@ -88,5 +93,6 @@ deps.utils = utils
 deps.firebase = firebase
 deps.room = room
 deps.rx = rx
+deps.maps = maps
 
 ext.deps = deps

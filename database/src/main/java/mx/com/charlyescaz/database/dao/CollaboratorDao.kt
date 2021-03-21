@@ -24,6 +24,9 @@ interface CollaboratorDao {
     @Query("SELECT * FROM collaborator WHERE in_cloud = :backup")
     fun findByInCloud(backup: Boolean): Maybe<List<CollaboratorDB>>
 
+    @Query("SELECT * FROM collaborator WHERE idLocalDB = :idLocal")
+    fun findByLocalId(idLocal: Long): Single<CollaboratorDB>
+
     @Query("DELETE FROM collaborator")
     fun deleteAll(): Completable
 }

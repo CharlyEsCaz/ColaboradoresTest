@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="collaborator"
             type="mx.com.charlyescaz.colaboradorestest.models.Collaborator" />

@@ -20,6 +20,12 @@
         <activity android:name=".ui.home.view.HomeActivity" />
         <activity android:name=".ui.auth.view.LoginActivity" />
         <activity android:name=".ui.collaborators.list.view.CollaboratorsActivity" />
+        <activity android:name=".ui.collaborators.map.view.MapActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA72qzym7DUL1klolQ4DFF_Ok0UegzhLpk" />
+
     </application>
 
 </manifest>

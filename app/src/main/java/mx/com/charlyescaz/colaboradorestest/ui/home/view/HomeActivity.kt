@@ -74,7 +74,7 @@ class HomeActivity: AppCompatActivity(), HomeView {
 
 
     override fun showProgress() {
-        progressDialog = Dialogs.progressDialog(supportFragmentManager, "Obteniendo datos")
+        progressDialog = Dialogs.progressDialog(supportFragmentManager, getString(R.string.getting_data))
     }
 
     override fun hideProgress() {

@@ -15,6 +15,9 @@ ext.DEBUG_MODE = DEBUG_MODE
 def API_BASE = 'api_base'
 ext.API_BASE = API_BASE
 
+def API_KEY = 'api_key'
+ext.API_KEY = API_KEY
+
 
 ext.getCustomProperty = { key ->
     Properties props = new Properties()
