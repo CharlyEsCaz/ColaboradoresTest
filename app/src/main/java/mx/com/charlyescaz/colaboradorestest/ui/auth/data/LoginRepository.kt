@@ -6,7 +6,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import mx.com.charlyescaz.colaboradorestest.R
 
-class FirebaseRepos(private val context: Context) {
+class LoginRepository(private val context: Context) {
     private val auth = Firebase.auth
 
     fun googleLogin(

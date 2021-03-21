@@ -12,6 +12,10 @@ ext.TRUE = TRUE
 ext.FALSE = FALSE
 ext.DEBUG_MODE = DEBUG_MODE
 
+def API_BASE = 'api_base'
+ext.API_BASE = API_BASE
+
+
 ext.getCustomProperty = { key ->
     Properties props = new Properties()
     def propFile = file ('../config/config.properties')

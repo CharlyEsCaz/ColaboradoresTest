@@ -10,7 +10,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import mx.com.charlyescaz.colaboradorestest.R
 import mx.com.charlyescaz.colaboradorestest.databinding.ActivityLoginBinding
-import mx.com.charlyescaz.colaboradorestest.ui.auth.data.FirebaseRepos
+import mx.com.charlyescaz.colaboradorestest.ui.auth.data.LoginRepository
 import mx.com.charlyescaz.colaboradorestest.ui.auth.presenter.LoginPresenter
 import mx.com.charlyescaz.colaboradorestest.ui.auth.view.interfaces.LoginView
 import mx.com.charlyescaz.colaboradorestest.ui.home.view.HomeActivity
@@ -24,7 +24,7 @@ class LoginActivity: AppCompatActivity(), LoginView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vBind = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        presenter = LoginPresenter(this,this, FirebaseRepos(this) )
+        presenter = LoginPresenter(this,this, LoginRepository(this) )
 
         setupGoogleLogin()
     }

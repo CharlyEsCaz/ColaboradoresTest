@@ -22,6 +22,14 @@ versions.shape_of_view = "1.4.7"
 //Firebase
 versions.firebase_boom = "26.7.0"
 versions.services_auth = "19.0.0"
+//RXJava
+versions.rx_java_2 = "2.2.9"
+versions.rx_android = "2.1.1"
+versions.room_rx = "1.1.1"
+//Room
+versions.room = "2.2.6"
+versions.rx_java = "2.2.6"
+
 
 def deps = [:]
 
@@ -40,6 +48,19 @@ def test = [:]
 test.junit = "junit:junit:$versions.junit"
 test.extjunit = "androidx.test.ext:junit:$versions.extjunit"
 test.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
+
+def room = [:]
+room.room = "androidx.room:room-runtime:$versions.room"
+room.room_compiler = "androidx.room:room-compiler:$versions.room"
+room.room_testing = "androidx.room:room-testing:$versions.room"
+room.room_ktx = "androidx.room:room-ktx:$versions.room"
+room.room_rx = "androidx.room:room-rxjava2:$versions.rx_java"
+
+def rx = [:]
+rx.rx_java = "io.reactivex.rxjava2:rxjava:$versions.rx_java_2"
+rx.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+rx.rx_room_persistance = "android.arch.persistence.room:rxjava2:$versions.room_rx"
+
 
 def retrofit = [:]
 retrofit.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
@@ -63,5 +84,7 @@ deps.test = test
 deps.retrofit = retrofit
 deps.utils = utils
 deps.firebase = firebase
+deps.room = room
+deps.rx = rx
 
 ext.deps = deps

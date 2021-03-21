@@ -1,36 +1,37 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
 }
 
 apply from: '../config/functions.gradle'
 apply from: '../config/versions.gradle'
+
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "mx.com.charlyescaz.colaboradorestest"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         debug {
             minifyEnabled false
             buildConfigField BOOLEAN, DEBUG_MODE, TRUE
+            buildConfigField STRING, API_BASE, getCustomProperty(API_BASE)
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField BOOLEAN, DEBUG_MODE, FALSE
+            buildConfigField STRING, API_BASE, getCustomProperty(API_BASE)
         }
     }
     compileOptions {
@@ -40,39 +41,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        dataBinding true
-    }
 }
 
 dependencies {
-    // WebServices module
-    implementation project(":web")
+    implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    // Database module
-    implementation project(":database")
+    api deps.retrofit.retrofit
+    api deps.retrofit.converter_json
+    api deps.retrofit.converter_scalars
+    api deps.retrofit.logging_interceptor
 
     //Kotlin
     implementation deps.kotlin.stdlib
-    implementation deps.kotlin.corektx
-    kapt deps.kotlin.kapt
-
-    //Shape Of View
-    implementation deps.utils.shape_of_view
-
-    //Firebase
-    implementation platform(deps.firebase.firebase_boom)
-    implementation deps.firebase.firebase_auth
-    implementation deps.firebase.firebase_play_services_auth
-    implementation deps.firebase.firebase_analytics
-
-    //Support
-    implementation deps.support.appcompat
-    implementation deps.support.material
-    implementation deps.support.constraintlayout
-
-    //Test
-    testImplementation deps.test.junit
-    androidTestImplementation deps.test.extjunit
-    androidTestImplementation deps.test.espresso
 }

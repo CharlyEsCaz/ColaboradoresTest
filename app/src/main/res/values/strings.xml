@@ -4,4 +4,5 @@
     <string name="google_success_credentials">Inicio de sesión exitoso</string>
     <string name="google_error_exception">Ocurrio un error, intentelo mas tarde</string>
     <string name="collaborators">Colaboradores</string>
+    <string name="wait">Espere porfavor...</string>
 </resources>

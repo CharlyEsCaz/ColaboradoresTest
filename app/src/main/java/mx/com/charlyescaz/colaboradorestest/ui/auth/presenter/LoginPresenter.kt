@@ -5,13 +5,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.GoogleAuthProvider
-import mx.com.charlyescaz.colaboradorestest.ui.auth.data.FirebaseRepos
+import mx.com.charlyescaz.colaboradorestest.R
+import mx.com.charlyescaz.colaboradorestest.ui.auth.data.LoginRepository
 import mx.com.charlyescaz.colaboradorestest.ui.auth.view.interfaces.LoginView
 
 class LoginPresenter(
     private val view: LoginView,
     private val context: Context,
-    private val fbRepos: FirebaseRepos
+    private val fbRepos: LoginRepository
 ) {
 
     fun attemptLoginGoogle(task: Task<GoogleSignInAccount>)
@@ -30,7 +31,7 @@ class LoginPresenter(
                 view.handleLoginSuccess()
             }
         }catch (e: ApiException){
-            view.handleLoginError("Error")
+            view.handleLoginError(context.getString(R.string.google_error_exception))
         }
 
     }

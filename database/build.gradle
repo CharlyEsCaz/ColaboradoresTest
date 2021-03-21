@@ -1,8 +1,7 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
 }
 
 apply from: '../config/functions.gradle'
@@ -13,13 +12,13 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "mx.com.charlyescaz.colaboradorestest"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -40,36 +39,25 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        dataBinding true
-    }
 }
 
 dependencies {
-    // WebServices module
-    implementation project(":web")
-
-    // Database module
-    implementation project(":database")
 
     //Kotlin
     implementation deps.kotlin.stdlib
     implementation deps.kotlin.corektx
-    kapt deps.kotlin.kapt
 
-    //Shape Of View
-    implementation deps.utils.shape_of_view
+    //Room
+    api deps.room.room
+    kapt deps.room.room_compiler
+    testImplementation deps.room.room_testing
+    api deps.room.room_ktx
+    api deps.room.room_rx
 
-    //Firebase
-    implementation platform(deps.firebase.firebase_boom)
-    implementation deps.firebase.firebase_auth
-    implementation deps.firebase.firebase_play_services_auth
-    implementation deps.firebase.firebase_analytics
-
-    //Support
-    implementation deps.support.appcompat
-    implementation deps.support.material
-    implementation deps.support.constraintlayout
+    // Rx
+    api deps.rx.rx_java
+    api deps.rx.rx_android
+    implementation deps.rx.rx_room_persistance
 
     //Test
     testImplementation deps.test.junit
